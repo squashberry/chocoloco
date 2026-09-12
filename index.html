@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+  />
+
+  <meta
+    name="theme-color"
+    content="#110806"
+  />
+
+  <meta
+    name="description"
+    content="Choco Loco — Patisserie, Café & Lounge in Pipeline, The Gambia."
+  />
+
+  <title>Choco Loco</title>
+
+  <!-- ======================================================
+       FONTS
+  ======================================================= -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ======================================================
+       ICONS
+  ======================================================= -->
+
+  <script
+    src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+    defer
+  ></script>
+
+  <!-- ======================================================
+       THREE.JS
+  ======================================================= -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    defer
+  ></script>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+  <script
+    src="app.js"
+    defer
+  ></script>
+</head>
+
+<body>
+
+  <!-- ======================================================
+       SPLASH
+  ======================================================= -->
+
+  <div
+    class="splash"
+    id="splash"
+  >
+
+    <div class="splash-orb orb-a"></div>
+    <div class="splash-orb orb-b"></div>
+
+    <div class="splash-center">
+
+      <div class="splash-mark">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="splash-word">
+        Choco
+        <strong>Loco</strong>
+      </div>
+
+      <p>
+        SWEET THINGS HAPPEN HERE
+      </p>
+
+      <div class="splash-loader">
+        <span></span>
+      </div>
+
+    </div>
+
+    <div class="splash-bottom">
+      PIPELINE · THE GAMBIA
+    </div>
+
+  </div>
+
+
+  <!-- ======================================================
+       APP
+  ======================================================= -->
+
+  <div
+    class="app"
+    id="app"
+  >
+
+    <!-- ====================================================
+         TOP BAR
+    ===================================================== -->
+
+    <header
+      class="topbar"
+      id="topbar"
+    >
+
+      <button
+        class="brand"
+        data-go="home"
+        aria-label="Home"
+      >
+
+        <span class="brand-symbol">
+          <i></i>
+          <i></i>
+        </span>
+
+        <span class="brand-text">
+          Choco
+          <strong>Loco</strong>
+        </span>
+
+      </button>
+
+
+      <div class="topbar-actions">
+
+        <button
+          class="top-icon"
+          id="openSearch"
+          aria-label="Search"
+        >
+          <i data-lucide="search"></i>
+        </button>
+
+        <button
+          class="top-icon bag-button"
+          id="openBag"
+          aria-label="Basket"
+        >
+          <i data-lucide="shopping-bag"></i>
+          <span
+            id="topBagCount"
+            class="count-dot"
+          >
+            0
+          </span>
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- ====================================================
+         SCREEN WRAPPER
+    ===================================================== -->
+
+    <main
+      class="screens"
+      id="screens"
+    >
+
+
+      <!-- ==================================================
+           HOME
+      =================================================== -->
+
+      <section
+        class="screen active"
+        id="screen-home"
+        data-screen="home"
+      >
+
+        <!-- HERO -->
+
+        <section class="home-hero">
+
+          <div class="hero-background-glow"></div>
+
+          <div class="hero-grid-lines"></div>
+
+          <div class="hero-copy">
+
+            <div class="location-chip">
+              <span class="live-dot"></span>
+              Pipeline · Open today
+            </div>
+
+            <div class="hero-title-mask">
+              <h1 class="hero-title">
+                A little
+                <span>
+                  crazy.
+                </span>
+                <br />
+                A lot
+                <em>
+                  delicious.
+                </em>
+              </h1>
+            </div>
+
+            <p class="hero-subtitle">
+              Handcrafted pastries, homemade ice cream,
+              beautiful cakes, coffee and milkshakes —
+              made for the moments you want to remember.
+            </p>
+
+            <div class="hero-buttons">
+
+              <button
+                class="primary-btn"
+                data-go="menu"
+              >
+                Explore menu
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+
+              <button
+                class="ghost-btn"
+                data-go="order"
+              >
+                Order something
+                <i data-lucide="arrow-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================================================
+               3D STAGE
+          ================================================= -->
+
+          <div class="hero-stage">
+
+            <div class="stage-halo halo-one"></div>
+            <div class="stage-halo halo-two"></div>
+
+            <!-- rotating typography -->
+
+            <div
+              class="orbit-text orbit-text-one"
+              id="orbitTextOne"
+            >
+
+              <span>HOMEMADE</span>
+              <span>•</span>
+              <span>ICE CREAM</span>
+              <span>•</span>
+              <span>GOOD MOOD</span>
+              <span>•</span>
+
+            </div>
+
+
+            <div
+              class="orbit-text orbit-text-two"
+              id="orbitTextTwo"
+            >
+
+              <span>CHOCO LOCO</span>
+              <span>✦</span>
+              <span>SWEET</span>
+              <span>✦</span>
+
+            </div>
+
+
+            <!-- rotating tiny labels -->
+
+            <div class="stage-label label-left">
+              <small>01</small>
+              HANDCRAFTED
+            </div>
+
+            <div class="stage-label label-right">
+              <small>02</small>
+              MADE FRESH
+            </div>
+
+
+            <!-- three.js -->
+
+            <div
+              id="iceCreamScene"
+              class="icecream-scene"
+            ></div>
+
+
+            <div class="stage-ground"></div>
+
+          </div>
+
+
+          <!-- scroll indicator -->
+
+          <button
+            class="hero-scroll"
+            data-scroll-home="intro"
+          >
+
+            <span class="scroll-wheel">
+              <i></i>
+            </span>
+
+            <span>
+              Scroll to taste
+            </span>
+
+          </button>
+
+        </section>
+
+
+        <!-- ==================================================
+             QUICK ORDER STRIP
+        =================================================== -->
+
+        <section class="quick-strip">
+
+          <button
+            class="quick-item"
+            data-go="order"
+          >
+
+            <span class="quick-icon">
+              <i data-lucide="shopping-bag"></i>
+            </span>
+
+            <span>
+              <small>FASTEST</small>
+              Order online
+            </span>
+
+            <i
+              class="arrow"
+              data-lucide="arrow-up-right"
+            ></i>
+
+          </button>
+
+
+          <div class="quick-divider"></div>
+
+
+          <a
+            class="quick-item"
+            href="tel:+2204000060"
+          >
+
+            <span class="quick-icon">
+              <i data-lucide="phone"></i>
+            </span>
+
+            <span>
+              <small>CALL US</small>
+              +220 400 0060
+            </span>
+
+            <i
+              class="arrow"
+              data-lucide="arrow-up-right"
+            ></i>
+
+          </a>
+
+        </section>
+
+
+        <!-- ==================================================
+             INTRO
+        =================================================== -->
+
+        <section
+          class="home-section intro-block"
+          id="intro"
+        >
+
+          <div class="section-kicker">
+            THE CHOCO LOCO WAY
+          </div>
+
+          <div class="intro-layout">
+
+            <h2>
+              Come for the
+              <span>sweet.</span>
+              <br />
+              Stay for the
+              <em>vibe.</em>
+            </h2>
+
+            <div class="intro-copy">
+
+              <p class="large">
+                Choco Loco is more than a pastry counter.
+                It's a place to pause, meet people, celebrate
+                something — or just reward yourself.
+              </p>
+
+              <p>
+                Fresh pastries, homemade ice cream,
+                decadent cakes, breakfast bites, sandwiches,
+                coffee, smoothies and milkshakes.
+              </p>
+
+              <button
+                class="underline-link"
+                data-go="profile"
+              >
+                Discover Choco Loco
+                <i data-lucide="arrow-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             REAL PHOTO FEATURE
+        =================================================== -->
+
+        <section class="photo-feature">
+
+          <div class="photo-feature-image">
+
+            <img
+              src="https://www.my-gambia.com/wp-content/uploads/Featured-photos-magazine-choco-loco.jpg"
+              alt="Choco Loco pastry counter and dessert display"
+              loading="lazy"
+            />
+
+            <div class="image-gradient"></div>
+
+            <div class="photo-stamp">
+              CHOCO<br />
+              LOCO
+            </div>
+
+          </div>
+
+
+          <div class="photo-feature-content">
+
+            <div class="section-kicker">
+              FRESH FROM THE COUNTER
+            </div>
+
+            <h2>
+              First you
+              <em>see it.</em>
+              <br />
+              Then you
+              <span>need it.</span>
+            </h2>
+
+            <p>
+              Cakes, pastries, macarons, dessert cups,
+              tarts and more, sitting fresh behind the counter.
+            </p>
+
+            <button
+              class="primary-btn"
+              data-go="menu"
+            >
+              See the menu
+              <i data-lucide="arrow-up-right"></i>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             DISCOVERY CARDS
+        =================================================== -->
+
+        <section class="home-section discovery">
+
+          <div class="section-head">
+
+            <div>
+              <div class="section-kicker">
+                WHAT ARE YOU FEELING?
+              </div>
+
+              <h2>
+                Pick your
+                <em>mood.</em>
+              </h2>
+            </div>
+
+            <button
+              class="round-btn"
+              data-go="menu"
+            >
+              <i data-lucide="arrow-up-right"></i>
+            </button>
+
+          </div>
+
+
+          <div class="mood-grid">
+
+            <button
+              class="mood-card mood-ice"
+              data-category="ice-cream"
+              data-go="menu"
+            >
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/2-9.jpg"
+                alt="Choco Loco ice cream selection"
+                loading="lazy"
+              />
+
+              <div class="mood-overlay"></div>
+
+              <div class="mood-content">
+
+                <span>01</span>
+
+                <h3>
+                  Give me
+                  <br />
+                  something
+                  <br />
+                  <em>cold.</em>
+                </h3>
+
+                <small>
+                  HOMEMADE ICE CREAM
+                </small>
+
+              </div>
+
+              <div class="mood-arrow">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+
+            </button>
+
+
+            <button
+              class="mood-card mood-pastry"
+              data-category="pastries"
+              data-go="menu"
+            >
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Choco Loco pastries and cakes"
+                loading="lazy"
+              />
+
+              <div class="mood-overlay"></div>
+
+              <div class="mood-content">
+
+                <span>02</span>
+
+                <h3>
+                  Give me
+                  <br />
+                  something
+                  <br />
+                  <em>golden.</em>
+                </h3>
+
+                <small>
+                  PASTRIES & CAKES
+                </small>
+
+              </div>
+
+              <div class="mood-arrow">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+
+            </button>
+
+
+            <button
+              class="mood-card mood-cafe"
+              data-category="drinks"
+              data-go="menu"
+            >
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/3-5.jpg"
+                alt="Choco Loco cafe counter"
+                loading="lazy"
+              />
+
+              <div class="mood-overlay"></div>
+
+              <div class="mood-content">
+
+                <span>03</span>
+
+                <h3>
+                  Give me
+                  <br />
+                  something
+                  <br />
+                  <em>smooth.</em>
+                </h3>
+
+                <small>
+                  COFFEE & SHAKES
+                </small>
+
+              </div>
+
+              <div class="mood-arrow">
+                <i data-lucide="arrow-up-right"></i>
+              </div>
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             BUILD YOUR OWN
+        =================================================== -->
+
+        <section class="builder-section">
+
+          <div class="builder-orb"></div>
+
+          <div class="builder-content">
+
+            <div class="section-kicker">
+              YOUR RULES
+            </div>
+
+            <h2>
+              Build
+              <br />
+              your
+              <em>own.</em>
+            </h2>
+
+            <p>
+              Choose a base. Add toppings.
+              Add sauce. Make the dessert yours.
+            </p>
+
+            <button
+              class="primary-btn light"
+              data-go="menu"
+            >
+              Start creating
+              <i data-lucide="sparkles"></i>
+            </button>
+
+          </div>
+
+          <div class="builder-stack">
+            <span>ICE CREAM</span>
+            <span>+</span>
+            <span>TOPPINGS</span>
+            <span>+</span>
+            <span>SAUCE</span>
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SOCIAL PROOF
+        =================================================== -->
+
+        <section class="home-section reviews">
+
+          <div class="section-kicker">
+            LOVE NOTES
+          </div>
+
+          <div class="review-heading">
+
+            <h2>
+              People leave
+              <em>happy.</em>
+            </h2>
+
+            <div class="rating">
+
+              <strong>4.6</strong>
+
+              <div class="rating-stars">
+                ★★★★★
+              </div>
+
+              <small>
+                17 reviews
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="reviews-track">
+
+            <article class="review-card">
+
+              <div class="review-stars">
+                ★★★★★
+              </div>
+
+              <p>
+                “Best ice cream I've tasted in a while.
+                The sugar was moderate and cone quality
+                was really good.”
+              </p>
+
+              <footer>
+                <span>RJ</span>
+                <div>
+                  <strong>Rayla J</strong>
+                  <small>Local Guide</small>
+                </div>
+              </footer>
+
+            </article>
+
+
+            <article class="review-card">
+
+              <div class="review-stars">
+                ★★★★★
+              </div>
+
+              <p>
+                “The best drinks and the best cakes I've
+                tried here. The atmosphere is really nice.”
+              </p>
+
+              <footer>
+                <span>RG</span>
+                <div>
+                  <strong>Rania Ghamgui</strong>
+                  <small>Guest</small>
+                </div>
+              </footer>
+
+            </article>
+
+
+            <article class="review-card">
+
+              <div class="review-stars">
+                ★★★★★
+              </div>
+
+              <p>
+                “The ice cream is delectable,
+                smooth and not too sweet.”
+              </p>
+
+              <footer>
+                <span>B</span>
+                <div>
+                  <strong>Betty</strong>
+                  <small>Guest</small>
+                </div>
+              </footer>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             VISIT
+        =================================================== -->
+
+        <section class="visit-block">
+
+          <img
+            src="https://www.my-gambia.com/wp-content/uploads/4-5.jpg"
+            alt="Choco Loco interior"
+            loading="lazy"
+          />
+
+          <div class="visit-gradient"></div>
+
+          <div class="visit-content">
+
+            <div class="section-kicker">
+              COME THROUGH
+            </div>
+
+            <h2>
+              See you
+              <em>at Pipeline.</em>
+            </h2>
+
+            <p>
+              Junction opposite Pipeline Mosque,
+              Blue Building.
+            </p>
+
+            <div class="visit-buttons">
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Choco+Loco+Pipeline+Gambia"
+                target="_blank"
+                rel="noopener"
+                class="primary-btn light"
+              >
+                Directions
+                <i data-lucide="map-pin"></i>
+              </a>
+
+              <a
+                href="tel:+2204000060"
+                class="glass-btn"
+              >
+                Call us
+                <i data-lucide="phone"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- HOME FOOTER -->
+
+        <footer class="app-footer">
+
+          <div class="footer-brand">
+            Choco
+            <em>Loco</em>
+          </div>
+
+          <p>
+            Patisserie · Café · Lounge
+          </p>
+
+          <div class="footer-meta">
+
+            <span>
+              Pipeline, The Gambia
+            </span>
+
+            <span>
+              7 AM — 11 PM
+            </span>
+
+          </div>
+
+          <small>
+            © 2026 Choco Loco
+          </small>
+
+        </footer>
+
+      </section>
+
+
+      <!-- ==================================================
+           MENU
+      =================================================== -->
+
+      <section
+        class="screen"
+        id="screen-menu"
+        data-screen="menu"
+      >
+
+        <div class="screen-top">
+
+          <div>
+
+            <span class="section-kicker">
+              THE MENU
+            </span>
+
+            <h1>
+              Pick your
+              <em>pleasure.</em>
+            </h1>
+
+          </div>
+
+          <button
+            class="round-btn"
+            id="menuSearchButton"
+          >
+            <i data-lucide="search"></i>
+          </button>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="menu-search">
+
+          <i data-lucide="search"></i>
+
+          <input
+            type="search"
+            id="menuInput"
+            placeholder="Search cake, ice cream, coffee..."
+            autocomplete="off"
+          />
+
+          <button
+            id="menuClear"
+            class="menu-clear"
+          >
+            <i data-lucide="x"></i>
+          </button>
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="category-row">
+
+          <button
+            class="category active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            class="category"
+            data-filter="ice-cream"
+          >
+            Ice cream
+          </button>
+
+          <button
+            class="category"
+            data-filter="cakes"
+          >
+            Cakes
+          </button>
+
+          <button
+            class="category"
+            data-filter="pastries"
+          >
+            Pastries
+          </button>
+
+          <button
+            class="category"
+            data-filter="drinks"
+          >
+            Drinks
+          </button>
+
+          <button
+            class="category"
+            data-filter="breakfast"
+          >
+            Breakfast
+          </button>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div
+          class="products-grid"
+          id="productsGrid"
+        >
+
+          <!-- ICE CREAM -->
+
+          <article
+            class="product-card"
+            data-name="Homemade Ice Cream"
+            data-category="ice-cream"
+            data-price=""
+            data-description="Choose from the homemade ice cream selection."
+            data-emoji="🍨"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/2-9.jpg"
+                alt="Homemade ice cream selection at Choco Loco"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                HOMEMADE
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Homemade Ice Cream</h3>
+
+                <p>
+                  Creamy · colourful · made in-house
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- LOTUS -->
+
+          <article
+            class="product-card"
+            data-name="Lotus Biscoff Cheesecake"
+            data-category="cakes"
+            data-price=""
+            data-description="Creamy cheesecake with Lotus Biscoff."
+            data-emoji="🍰"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Choco Loco cakes and pastries"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                SIGNATURE
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Lotus Biscoff Cheesecake</h3>
+
+                <p>
+                  Creamy cheesecake · Biscoff
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- BROWNIE -->
+
+          <article
+            class="product-card"
+            data-name="Brownies to Die For"
+            data-category="cakes"
+            data-price=""
+            data-description="Rich chocolate brownie, made for serious chocolate cravings."
+            data-emoji="🍫"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Chocolate desserts at Choco Loco"
+                loading="lazy"
+              />
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Brownies to Die For</h3>
+
+                <p>
+                  Rich · fudgy · chocolate
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PISTACHIO -->
+
+          <article
+            class="product-card"
+            data-name="Pistachio White Chocolate"
+            data-category="cakes"
+            data-price=""
+            data-description="Pistachio and white chocolate dessert."
+            data-emoji="🍰"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Pistachio dessert at Choco Loco"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                FAVOURITE
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Pistachio White Chocolate</h3>
+
+                <p>
+                  Pistachio · white chocolate
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- CROISSANT -->
+
+          <article
+            class="product-card"
+            data-name="Fresh Croissant"
+            data-category="pastries"
+            data-price=""
+            data-description="Freshly baked buttery croissant."
+            data-emoji="🥐"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/4-5.jpg"
+                alt="Fresh pastries inside Choco Loco"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                FRESH
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Fresh Croissant</h3>
+
+                <p>
+                  Buttery · flaky · baked fresh
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- BANOFFEE -->
+
+          <article
+            class="product-card"
+            data-name="Banoffee Slice"
+            data-category="cakes"
+            data-price=""
+            data-description="Banoffee slice with caramel and biscuit crumble."
+            data-emoji="🍌"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Choco Loco dessert display"
+                loading="lazy"
+              />
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Banoffee Slice</h3>
+
+                <p>
+                  Caramel · biscuit · banana
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- CARAMEL MACCHIATO -->
+
+          <article
+            class="product-card"
+            data-name="Caramel Macchiato"
+            data-category="drinks"
+            data-price=""
+            data-description="Espresso with creamy milk and caramel."
+            data-emoji="☕"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/3-5.jpg"
+                alt="Choco Loco drinks station"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                COFFEE
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Caramel Macchiato</h3>
+
+                <p>
+                  Espresso · milk · caramel
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- STRAWBERRY -->
+
+          <article
+            class="product-card"
+            data-name="Strawberry Dream"
+            data-category="drinks"
+            data-price=""
+            data-description="Indulgent strawberry milkshake."
+            data-emoji="🥤"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/3-5.jpg"
+                alt="Choco Loco beverage counter"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                SHAKE
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Strawberry Dream</h3>
+
+                <p>
+                  Strawberry · creamy · cold
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- COOKIES -->
+
+          <article
+            class="product-card"
+            data-name="Cookies & Cream Shake"
+            data-category="drinks"
+            data-price=""
+            data-description="Rich cookies and cream milkshake."
+            data-emoji="🥤"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/3-5.jpg"
+                alt="Choco Loco cafe counter"
+                loading="lazy"
+              />
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Cookies & Cream Shake</h3>
+
+                <p>
+                  Creamy · crunchy · indulgent
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- BUBBLE WAFFLE -->
+
+          <article
+            class="product-card"
+            data-name="Bubble Waffle"
+            data-category="breakfast"
+            data-price=""
+            data-description="Fresh bubble waffle, perfect with toppings and sauce."
+            data-emoji="🧇"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/5-5.jpg"
+                alt="Choco Loco dessert counter"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                BUILD YOUR OWN
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Bubble Waffle</h3>
+
+                <p>
+                  Choose your toppings & sauce
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- SANDWICH -->
+
+          <article
+            class="product-card"
+            data-name="Fresh Sandwich"
+            data-category="breakfast"
+            data-price=""
+            data-description="Freshly prepared sandwich."
+            data-emoji="🥪"
+          >
+
+            <div class="product-image">
+
+              <img
+                src="https://www.my-gambia.com/wp-content/uploads/4-5.jpg"
+                alt="Choco Loco patisserie counter"
+                loading="lazy"
+              />
+
+              <span class="product-tag">
+                BREAKFAST
+              </span>
+
+              <button
+                class="favorite"
+                aria-label="Favorite"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+            </div>
+
+            <div class="product-info">
+
+              <div>
+                <h3>Fresh Sandwich</h3>
+
+                <p>
+                  Freshly prepared · savoury
+                </p>
+              </div>
+
+              <button class="product-add">
+                <i data-lucide="plus"></i>
+              </button>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div
+          class="empty-results"
+          id="emptyResults"
+        >
+
+          <div class="empty-result-icon">
+            <i data-lucide="search-x"></i>
+          </div>
+
+          <h3>
+            Nothing sweet found.
+          </h3>
+
+          <p>
+            Try another search.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================================================
+           ORDER
+      =================================================== -->
+
+      <section
+        class="screen"
+        id="screen-order"
+        data-screen="order"
+      >
+
+        <div class="screen-top">
+
+          <div>
+
+            <span class="section-kicker">
+              ORDER
+            </span>
+
+            <h1>
+              Bring the
+              <em>good stuff.</em>
+            </h1>
+
+          </div>
+
+        </div>
+
+
+        <!-- DELIVERY METHOD -->
+
+        <div class="order-method">
+
+          <button
+            class="method-card active"
+            data-mode="pickup"
+          >
+
+            <span class="method-icon">
+              <i data-lucide="store"></i>
+            </span>
+
+            <span class="method-copy">
+              <strong>Pickup</strong>
+              <small>
+                Ready when you arrive
+              </small>
+            </span>
+
+            <i
+              class="method-check"
+              data-lucide="check-circle-2"
+            ></i>
+
+          </button>
+
+
+          <button
+            class="method-card"
+            data-mode="delivery"
+          >
+
+            <span class="method-icon">
+              <i data-lucide="bike"></i>
+            </span>
+
+            <span class="method-copy">
+              <strong>Home delivery</strong>
+              <small>
+                Bring it to your door
+              </small>
+            </span>
+
+            <i
+              class="method-check"
+              data-lucide="check-circle-2"
+            ></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- ORDER CARD -->
+
+        <div class="order-card">
+
+          <div class="order-card-head">
+
+            <div>
+
+              <small>
+                YOUR BASKET
+              </small>
+
+              <strong id="orderCount">
+                0 items
+              </strong>
+
+            </div>
+
+            <button id="orderEdit">
+              Edit
+            </button>
+
+          </div>
+
+
+          <div
+            class="order-lines"
+            id="orderLines"
+          >
+
+            <div class="empty-order">
+
+              <div class="empty-order-emoji">
+                🍰
+              </div>
+
+              <h3>
+                Your basket is empty.
+              </h3>
+
+              <p>
+                Start with something sweet.
+              </p>
+
+              <button
+                class="primary-btn small"
+                data-go="menu"
+              >
+                Browse menu
+                <i data-lucide="arrow-right"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div class="order-total-row">
+
+            <span>
+              Estimated total
+            </span>
+
+            <strong id="orderTotal">
+              — 
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="customer-card">
+
+          <div class="customer-heading">
+
+            <span class="customer-icon">
+              <i
+                id="customerModeIcon"
+                data-lucide="map-pin"
+              ></i>
+            </span>
+
+            <div>
+
+              <strong id="customerModeTitle">
+                Pickup details
+              </strong>
+
+              <small id="customerModeText">
+                Tell us who is collecting.
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="input-grid">
+
+            <label>
+              <span>Name</span>
+
+              <input
+                id="customerName"
+                type="text"
+                placeholder="Your name"
+              />
+            </label>
+
+            <label>
+              <span>Phone</span>
+
+              <input
+                id="customerPhone"
+                type="tel"
+                placeholder="+220..."
+              />
+            </label>
+
+          </div>
+
+
+          <label
+            class="full-input"
+            id="addressWrap"
+            hidden
+          >
+
+            <span>Delivery address</span>
+
+            <textarea
+              id="customerAddress"
+              rows="3"
+              placeholder="Area, house, landmark..."
+            ></textarea>
+
+          </label>
+
+
+          <div class="whatsapp-hint">
+
+            <i data-lucide="message-circle"></i>
+
+            <p>
+              Your order will be sent to Choco Loco
+              through WhatsApp for confirmation.
+            </p>
+
+          </div>
+
+
+          <button
+            class="checkout-btn"
+            id="checkout"
+          >
+
+            <span>
+              Send order on WhatsApp
+            </span>
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================================================
+           PROFILE
+      =================================================== -->
+
+      <section
+        class="screen"
+        id="screen-profile"
+        data-screen="profile"
+      >
+
+        <div class="screen-top">
+
+          <div>
+
+            <span class="section-kicker">
+              CHOCO LOCO
+            </span>
+
+            <h1>
+              Stay.
+              <br />
+              Sip.
+              <br />
+              <em>Savor.</em>
+            </h1>
+
+          </div>
+
+          <div class="brand-badge">
+            CL
+          </div>
+
+        </div>
+
+
+        <!-- STORY -->
+
+        <div class="story-photo">
+
+          <img
+            src="https://www.my-gambia.com/wp-content/uploads/Featured-photos-magazine-choco-loco.jpg"
+            alt="Choco Loco"
+            loading="lazy"
+          />
+
+          <div class="story-gradient"></div>
+
+          <div class="story-copy">
+
+            <span>
+              THE EXPERIENCE
+            </span>
+
+            <h2>
+              Made for
+              <em>slow moments.</em>
+            </h2>
+
+            <p>
+              A warm, stylish space for dessert,
+              coffee, conversations and late-night cravings.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- INFO -->
+
+        <div class="info-list">
+
+          <a
+            class="info-row"
+            href="tel:+2204000060"
+          >
+
+            <span class="info-row-icon">
+              <i data-lucide="phone"></i>
+            </span>
+
+            <div>
+              <strong>
+                Call Choco Loco
+              </strong>
+
+              <small>
+                +220 400 0060
+              </small>
+            </div>
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </a>
+
+
+          <a
+            class="info-row"
+            href="https://www.google.com/maps/search/?api=1&query=Choco+Loco+Pipeline+Gambia"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <span class="info-row-icon">
+              <i data-lucide="map-pin"></i>
+            </span>
+
+            <div>
+              <strong>
+                Find us
+              </strong>
+
+              <small>
+                Junction opposite Pipeline Mosque
+              </small>
+            </div>
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </a>
+
+
+          <button
+            class="info-row"
+            id="shareBtn"
+          >
+
+            <span class="info-row-icon">
+              <i data-lucide="share-2"></i>
+            </span>
+
+            <div>
+              <strong>
+                Share Choco Loco
+              </strong>
+
+              <small>
+                Send something sweet
+              </small>
+            </div>
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </button>
+
+
+          <button
+            class="info-row"
+            id="reviewBtn"
+          >
+
+            <span class="info-row-icon">
+              <i data-lucide="star"></i>
+            </span>
+
+            <div>
+              <strong>
+                Leave a review
+              </strong>
+
+              <small>
+                Tell people how it was
+              </small>
+            </div>
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- HOURS -->
+
+        <div class="hours-card">
+
+          <div>
+
+            <small>
+              OPENING HOURS
+            </small>
+
+            <strong>
+              7 AM — 11 PM
+            </strong>
+
+            <p>
+              Sunday · 8 AM — 11 PM
+            </p>
+
+          </div>
+
+          <div class="open-badge">
+            <i></i>
+            Open
+          </div>
+
+        </div>
+
+
+        <div class="profile-bottom">
+
+          <div class="footer-logo">
+            Choco
+            <em>Loco</em>
+          </div>
+
+          <p>
+            Patisserie · Café · Lounge
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- ====================================================
+         BOTTOM NAV
+    ===================================================== -->
+
+    <nav
+      class="bottom-nav"
+      id="bottomNav"
+    >
+
+      <span
+        class="nav-indicator"
+        id="navIndicator"
+      ></span>
+
+
+      <button
+        class="nav-item active"
+        data-tab="home"
+        data-index="0"
+      >
+
+        <span class="nav-icon">
+          <i data-lucide="house"></i>
+        </span>
+
+        <span>
+          Home
+        </span>
+
+      </button>
+
+
+      <button
+        class="nav-item"
+        data-tab="menu"
+        data-index="1"
+      >
+
+        <span class="nav-icon">
+          <i data-lucide="cookie"></i>
+        </span>
+
+        <span>
+          Menu
+        </span>
+
+      </button>
+
+
+      <button
+        class="order-nav"
+        data-tab="order"
+        data-index="2"
+      >
+
+        <span class="order-nav-circle">
+          <i data-lucide="plus"></i>
+        </span>
+
+        <span>
+          Order
+        </span>
+
+      </button>
+
+
+      <button
+        class="nav-item"
+        data-tab="profile"
+        data-index="3"
+      >
+
+        <span class="nav-icon">
+          <i data-lucide="sparkles"></i>
+        </span>
+
+        <span>
+          Choco
+        </span>
+
+      </button>
+
+
+      <button
+        class="nav-item"
+        data-action="bag"
+        data-index="4"
+      >
+
+        <span class="nav-icon">
+          <i data-lucide="shopping-bag"></i>
+
+          <b
+            class="mini-count"
+            id="miniCount"
+          >
+            0
+          </b>
+        </span>
+
+        <span>
+          Bag
+        </span>
+
+      </button>
+
+    </nav>
+
+
+    <!-- ====================================================
+         SEARCH OVERLAY
+    ===================================================== -->
+
+    <div
+      class="search-overlay"
+      id="searchOverlay"
+    >
+
+      <div class="search-modal">
+
+        <div class="search-modal-top">
+
+          <span>
+            SEARCH CHOCO LOCO
+          </span>
+
+          <button id="closeSearch">
+            <i data-lucide="x"></i>
+          </button>
+
+        </div>
+
+
+        <div class="mega-search">
+
+          <i data-lucide="search"></i>
+
+          <input
+            id="globalSearch"
+            type="search"
+            placeholder="What are you craving?"
+            autocomplete="off"
+          />
+
+        </div>
+
+
+        <div class="search-popular">
+
+          <small>
+            TRY THESE
+          </small>
+
+          <button data-search-term="ice cream">
+            Ice cream
+          </button>
+
+          <button data-search-term="cake">
+            Cake
+          </button>
+
+          <button data-search-term="brownie">
+            Brownie
+          </button>
+
+          <button data-search-term="coffee">
+            Coffee
+          </button>
+
+          <button data-search-term="shake">
+            Shake
+          </button>
+
+        </div>
+
+
+        <div
+          class="search-results"
+          id="globalResults"
+        ></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ====================================================
+         BAG SHEET
+    ===================================================== -->
+
+    <div
+      class="sheet-backdrop"
+      id="sheetBackdrop"
+    ></div>
+
+
+    <aside
+      class="bag-sheet"
+      id="bagSheet"
+    >
+
+      <div class="sheet-handle"></div>
+
+      <div class="sheet-header">
+
+        <div>
+
+          <small>
+            YOUR BASKET
+          </small>
+
+          <strong>
+            Something sweet.
+          </strong>
+
+        </div>
+
+        <button id="closeBag">
+          <i data-lucide="x"></i>
+        </button>
+
+      </div>
+
+
+      <div
+        class="sheet-lines"
+        id="sheetLines"
+      ></div>
+
+
+      <div class="sheet-bottom">
+
+        <div class="sheet-total">
+
+          <span>
+            Estimated total
+          </span>
+
+          <strong id="sheetTotal">
+            —
+          </strong>
+
+        </div>
+
+        <button
+          class="checkout-btn"
+          id="sheetCheckout"
+        >
+
+          <span>
+            Go to checkout
+          </span>
+
+          <i data-lucide="arrow-up-right"></i>
+
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ====================================================
+         TOAST
+    ===================================================== -->
+
+    <div
+      class="toast"
+      id="toast"
+    >
+
+      <span class="toast-icon">
+        <i data-lucide="check"></i>
+      </span>
+
+      <div>
+
+        <strong id="toastTitle">
+          Added
+        </strong>
+
+        <small id="toastText">
+          Added to your basket.
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
